@@ -8,7 +8,7 @@ unsigned int interval = 2000;
 
 void setup() {
   pinMode(D2, INPUT_PULLUP);
-  attachInterrupt(D2, notify, FALLING);
+  attachInterrupt(D2, notify, RISING);
 }
 
  void loop()
@@ -28,7 +28,5 @@ void notify(){
           client.print("open");
 
         }
-
-	}
-
+    }
 }
